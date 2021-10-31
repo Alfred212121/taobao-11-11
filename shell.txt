@@ -1,0 +1,4 @@
+jupyter nbconvert --to script 封装_V2.ipynb
+pyinstaller -F -w -i haha.ico 封装_V2.py
+python -m nuitka --standalone --windows-disable-console --show-progress --plugin-enable=tk-inter --plugin-enable=numpy --windows-icon-from-ico=haha.ico  --mingw64  --onefile mds_package.py
+python -m nuitka --standalone --show-progress --plugin-enable=tk-inter --plugin-enable=numpy --windows-icon-from-ico=haha.ico  --mingw64  --onefile mds_package_test.py
